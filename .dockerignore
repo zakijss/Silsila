@@ -1,0 +1,13 @@
+# Build context for the Containerfile (Podman and Docker both read this file). Only what the image
+# needs goes in; personal files, the cache and any data/enrich/ lookups stay out.
+*
+!index.html
+!js/
+!lib/
+!assets/
+!data/*.js
+!data/chips/
+!tools/build_data.py
+data/tree.js
+data/ancient.js
+data/world.js

@@ -126,6 +126,16 @@ The container needs no write access except `/tmp`. To run it locked down without
 podman run --rm -p 8080:8080 --read-only --tmpfs /tmp --cap-drop ALL silsila
 ```
 
+To keep it running as a service with rootless Podman, `deploy/silsila.container` is a Quadlet with the same locks. After `podman build -t silsila .`:
+
+```
+mkdir -p ~/.config/containers/systemd
+cp deploy/silsila.container ~/.config/containers/systemd/
+systemctl --user daemon-reload && systemctl --user start silsila.service
+```
+
+It serves on `127.0.0.1:8080`; edit `PublishPort=` to serve your network. `loginctl enable-linger` starts it at boot without a login.
+
 ## Hosting it
 
 Silsila is static files; any web server will do. Copy these to the server and nothing else:

@@ -1,5 +1,9 @@
 <p align="center"><img src="docs/banner.png" alt="Silsila: Y-DNA and autosomal DNA, explored in a browser tab. Files stay with you." width="100%"></p>
 
+[![CI](https://github.com/zakijss/Silsila/actions/workflows/ci.yml/badge.svg)](https://github.com/zakijss/Silsila/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/zakijss/Silsila)](https://github.com/zakijss/Silsila/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 # Silsila
 
 Silsila reads the raw DNA files you download from FamilyTreeDNA, 23andMe, AncestryDNA, MyHeritage or Living DNA and shows you what is in them, in a browser tab, without sending them anywhere. A file with Y calls places a paternal line on the FamilyTreeDNA Y tree and links each branch on it to its age, the ancient men who share it, notable families, testers' countries, STR markers and your matches. An autosomal file, which everyone has, fills the Genome view: chromosomes, runs of homozygosity, trait SNPs and a one-to-one comparison with a relative's file.

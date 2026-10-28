@@ -3,7 +3,7 @@
 # The first stage downloads the public sources (about 160 MB) and builds data/tree.js, data/ancient.js
 # and data/world.js, which the repository does not ship; see THIRD-PARTY.md for their terms.
 
-FROM docker.io/library/python:3.14.9-alpine AS data
+FROM docker.io/library/python:3.15.0-alpine AS data
 RUN apk add --no-cache curl
 WORKDIR /src
 # Downloads first, so editing the build script does not fetch them again.

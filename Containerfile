@@ -21,7 +21,7 @@ RUN python3 tools/build_data.py --ftdna cache/haplotree.json --yfull cache/yfull
  && mkdir -p data/enrich \
  && echo 'window.SILSILA=window.SILSILA||{};SILSILA.enrichIndex=[];' > data/enrich/index.js
 
-FROM docker.io/nginxinc/nginx-unprivileged:1.30.6-alpine
+FROM docker.io/nginxinc/nginx-unprivileged:1.31.7-alpine
 WORKDIR /usr/share/nginx/html
 COPY index.html ./
 COPY js/ js/

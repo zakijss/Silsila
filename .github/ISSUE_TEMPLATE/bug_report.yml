@@ -1,0 +1,26 @@
+name: Bug report
+description: Something doesn't work as the README says
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Environment
+      description: Please give the browser, which company the file came from and roughly when you downloaded it (never the file itself).
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Logs or output
+      description: Remove host names, addresses and tokens before pasting.
+      render: text

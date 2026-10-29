@@ -1,0 +1,16 @@
+# docker compose up (or podman compose up), then open http://localhost:8080
+services:
+  silsila:
+    build:
+      context: .
+      dockerfile: Containerfile
+    image: silsila
+    ports:
+      - "8080:8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true

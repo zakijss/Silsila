@@ -1,0 +1,25 @@
+# Personal files and raw genotype data never go in the repository. Keep your own
+# downloads in personal/ or anywhere outside the repo.
+personal/
+*.csv
+*.gz
+*.zip
+*.vcf
+*.bam
+*.cram
+*.fastq
+genome_*.txt
+AncestryDNA*.txt
+*.anno
+!data/chips/*.txt
+
+# Built by tools/ from sources that may not be redistributed; see THIRD-PARTY.md
+data/tree.js
+data/ancient.js
+data/world.js
+data/enrich/
+cache/
+
+node_modules/
+.DS_Store
+__pycache__/

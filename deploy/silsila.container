@@ -1,0 +1,27 @@
+# A rootless Podman Quadlet for Silsila. Build the image first (it downloads
+# and builds the reference data, about 160 MB):
+#   podman build -t silsila .
+# then copy this file to ~/.config/containers/systemd/silsila.container and
+#   systemctl --user daemon-reload && systemctl --user start silsila.service
+# It starts again at boot once lingering is on: loginctl enable-linger
+[Unit]
+Description=Silsila
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+ContainerName=silsila
+Image=localhost/silsila:latest
+# Only this machine. To serve the page on your network, drop the 127.0.0.1:
+PublishPort=127.0.0.1:8080:8080
+ReadOnly=true
+Tmpfs=/tmp
+DropCapability=all
+NoNewPrivileges=true
+
+[Service]
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=default.target

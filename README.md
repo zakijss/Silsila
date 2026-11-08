@@ -8,7 +8,10 @@
 
 Silsila reads the raw DNA files you download from FamilyTreeDNA, 23andMe, AncestryDNA, MyHeritage or Living DNA and shows you what is in them, in a browser tab, without sending them anywhere ([Privacy](#privacy)).
 
-![Silsila's Net view with a made-up sample file placed on R-M222: the line from the first modern humans to the branch in 3D, with ancient samples and SNPs, and the branch's dates on the right](docs/screenshot-net.png)
+![A 3D render of a laptop on a desk showing Silsila's Map view for a made-up sample placed on R-M222: a globe with ancient samples across Europe and the line's migration route, and the branch's dates on the right](docs/render-hero.webp)
+
+<sub>The picture above is a 3D render with a real screenshot of Silsila on the
+laptop. The plain screenshots are under [Features](#features).</sub>
 
 It is a static page with no server side. The only build is the reference data, which one Python script makes once.
 
@@ -19,6 +22,13 @@ It is a static page with no server side. The only build is the reference data, w
 - Net, Timeline, Map, Genome and Database views, with flat D3 versions where WebGL is missing.
 - Files go in as they came from the company: `.gz`, `.zip`, `.csv` or `.txt`.
 - Runs from any static web server, a container, or straight from disk.
+
+The Net view in the dark and light themes, with invented sample files placed on R-M222:
+
+<p align="center">
+  <img src="docs/screenshot-net-dark.webp" alt="The Net view in the dark theme: the line from the first modern humans down to R-M222 in 3D, with ancient samples, STR markers and matches around the sample, and the branch's dates and line on the right" width="49%">
+  <img src="docs/screenshot-net-light.webp" alt="The same Net view in the light theme" width="49%">
+</p>
 
 ## How it works
 
@@ -152,15 +162,17 @@ Keep your own files outside the repository, or in `personal/`, which `.gitignore
 
 Net shows your line from the first modern humans to your branch in 3D, with your SNPs, ancient samples, notable lines, the 111 STR markers and your matches hanging off it. Click a sphere and the reading panel explains it.
 
+![A closer 3D render of the laptop from the left, focused on the Net view on its screen](docs/render-close.webp)
+
 Timeline is the same network laid out by age on a log scale, with dated events in world history along the top.
 
-![The Timeline view: the same network laid out by age on a log scale, with events such as Lascaux and the Silk Road along the top](docs/screenshot-timeline.png)
+![The Timeline view: the same network laid out by age on a log scale from 500,000 years ago to today, with events such as Lascaux, Writing and Aksum along the top](docs/screenshot-timeline.webp)
 
 Map is a globe with NASA's day or night Earth, the share of each country's testers on a chosen branch, ancient men whose line meets yours within the last 20,000 years, and FamilyTreeDNA's migration route for the line. A time bar scrubs from the deepest ancestor to today.
 
 Genome draws the Y chromosome with SNP and STR positions, and with an autosomal file, all 22 autosomes and the X, heterozygosity per megabase, runs of homozygosity, trait SNPs and the comparison with a relative.
 
-![The Genome view for the sample file: Y chromosome SNP positions, then autosomal heterozygosity and runs of homozygosity](docs/screenshot-genome.png)
+![The Genome view for the sample file: heterozygosity per megabase on all 22 autosomes and the X, with three runs of homozygosity outlined on chromosomes 3, 11 and 18](docs/screenshot-genome.webp)
 
 Database has every table behind the views (your line, all 110,000 branches, the indexed Y SNPs with your calls, STR markers, ancient samples, matches and more), filterable, sortable and exportable as CSV.
 
@@ -281,4 +293,4 @@ The first prints `all genome checks pass` or stops at the first failed assertion
 
 ## License
 
-Silsila's code is under the MIT licence; see [LICENSE](LICENSE). The bundled libraries, fonts, images and data keep their own terms, listed in [THIRD-PARTY.md](THIRD-PARTY.md).
+Silsila's code is under the MIT licence; see [LICENSE](LICENSE). The bundled libraries, fonts, images and data keep their own terms, and the renders in `docs/` use Poly Haven's CC0 models and textures; [THIRD-PARTY.md](THIRD-PARTY.md) lists them all.

@@ -20,6 +20,7 @@ Silsila's own code is under the MIT licence in `LICENSE`. This file lists everyt
 | STR mutation rates | as cited per marker | `data/str.js` | YHRD (https://yhrd.org/pages/resources/mutation_rates), Chandler 2006, Burgarella and Navascués 2011 and a secondary compilation | the cited authors | published figures, cited |
 | STR positions | `str_hg38.gff3` | `data/str.js`, the `p` fields | YBrowse, https://ybrowse.org/gbrowse2/gff/str_hg38.gff3 | YBrowse | no licence stated; chromosome coordinates only |
 | Y positions on other companies' chips | 23andMe v3 to v5, AncestryDNA v1 and v2, MyHeritage | `data/chips/*-y-grch37.txt` | public Personal Genome Project files, https://my.pgp-hms.org/public_genetic_data | the PGP participants, who released them | CC0 |
+| Poly Haven assets: Book Encyclopedia Set 01, Potted Plant 01, Walnut Veneer and Painted Plaster Wall, and the Kiara Interior HDRI | | rendered into `docs/render-hero.webp` and `docs/render-close.webp` | https://polyhaven.com | John Malcolm, Rico Cilliers, Jenelle van Heerden, Amal Kumar, Greg Zaal | CC0 1.0 (public domain dedication) |
 | Y positions on the Family Finder chip | | `data/chips/ftdna-family-finder-y.txt` | the POSITION column of a FamilyTreeDNA Family Finder Y download; positions only, no genotypes | | a list of chip coordinates |
 | Company header lines | | `test/fixtures/` | public Personal Genome Project files, over invented rows | the PGP participants | CC0 |
 
